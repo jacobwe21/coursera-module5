@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // and process them: choose random category, retrieve home HTML snippet, insert that
 // random category into the home HTML snippet, and then insert that snippet into our
 // main page (index.html).
-//
 // TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
 // so it can be called when server responds with the categories data.
 
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML(allCategoriesUrl),
+  buildAndShowHomeHTML,
   true); // Explicitly setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
