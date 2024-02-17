@@ -93,8 +93,9 @@ $ajaxUtils.sendGetRequest(
 		  
 			// TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
 			// Pay attention to what type of data that function returns vs what the chosenCategoryShortName variable's name implies it expects.
-			var chosenCategoryShortName = chooseRandomCategory(categories).catShortName;
-			console.log("short Category: "+chosenCategoryShortName);
+			var category = chooseRandomCategory(categories);
+			var chosenCategoryShortName = "&apos;"+category.short_name+"&apos;";
+			console.log("short_name: "+chosenCategoryShortName);
 			  
 			// TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the chosen category from STEP 2. Use existing insertProperty function for that purpose.
 			// Look through this code for an example of how to do use the insertProperty function.
